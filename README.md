@@ -1,5 +1,12 @@
 # Sistema de Gestão de Cursos Online
 
+### Integrantes
+- Bruno Leonardo Silva
+- Caique de Oliveira Castro
+- Heitor Pereira de Lucena
+- Mariana Vidal Vaz
+- William Vieira de Sousa
+
 ## Descrição do Domínio e Justificativa
 
 O sistema **Gestão de Cursos Online** tem como objetivo gerenciar um ambiente educacional digital, permitindo o cadastro de **alunos, professores, cursos, aulas e matrículas**, além do controle de **avaliações, certificados e categorias de cursos**.
