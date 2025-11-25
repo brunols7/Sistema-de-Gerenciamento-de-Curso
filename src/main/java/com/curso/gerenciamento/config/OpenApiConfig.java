@@ -1,8 +1,11 @@
 package com.curso.gerenciamento.config;
 
+import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.Contact;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
+import io.swagger.v3.oas.models.security.SecurityScheme;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -18,6 +21,14 @@ public class OpenApiConfig {
                         .description("API para gerenciamento de cursos, alunos, professores, aulas, avaliações, certificados e matrículas")
                         .contact(new Contact()
                                 .name("Equipe de Desenvolvimento")
-                                .url("https://github.com/brunols7/Sistema-de-Gerenciamento-de-Curso")));
+                                .url("https://github.com/brunols7/Sistema-de-Gerenciamento-de-Curso")))
+                .addSecurityItem(new SecurityRequirement().addList("bearerAuth"))
+                .components(new Components()
+                        .addSecuritySchemes("bearerAuth", new SecurityScheme()
+                                .name("bearerAuth")
+                                .type(SecurityScheme.Type.HTTP)
+                                .scheme("bearer")
+                                .bearerFormat("JWT")
+                                .description("Insira o token JWT")));
     }
 }
